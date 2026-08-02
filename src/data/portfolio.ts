@@ -8,7 +8,7 @@ export const profile = {
   location: "Coimbatore, Tamil Nadu",
   about:
     "I am a passionate Computer Science Engineering student with strong interest in Full Stack Development, Artificial Intelligence, Web Technologies, and Problem Solving. I enjoy building innovative applications and continuously improving my technical skills through projects, internships, certifications, and coding practice.",
-  email: "mahanasri@example.com",
+  email: "mahanasrim@gmail.com",
 };
 
 export const skills = [
@@ -111,8 +111,12 @@ export const codingProfiles = {
   },
   others: [
     { name: "GitHub", url: "https://github.com/", note: "Projects & source code" },
-    { name: "LeetCode", url: "https://leetcode.com/", note: "DSA problem solving" },
-    { name: "LinkedIn", url: "https://linkedin.com/", note: "Professional network" },
+    { name: "LeetCode", url: "https://leetcode.com/u/k3nlk9iAwU/", note: "DSA problem solving" },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/mahanasri-m",
+      note: "Professional network",
+    },
   ],
 };
 
@@ -124,10 +128,9 @@ export const codingStats = [
 ];
 
 export const socials = [
-  { name: "LinkedIn", url: "https://linkedin.com/" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/mahanasri-m" },
   { name: "GitHub", url: "https://github.com/" },
-  { name: "Instagram", url: "https://instagram.com/" },
-  { name: "YouTube", url: "https://youtube.com/" },
+  { name: "LeetCode", url: "https://leetcode.com/u/k3nlk9iAwU/" },
   { name: "Email", url: `mailto:${profile.email}` },
 ];
 

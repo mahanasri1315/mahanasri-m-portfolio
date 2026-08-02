@@ -3,7 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { z } from "zod";
 import { HiCheck, HiPaperAirplane } from "react-icons/hi";
-import { FaGithub, FaLinkedin, FaInstagram, FaYoutube, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 import { PageShell } from "@/components/portfolio/PageShell";
 import { profile, socials } from "@/data/portfolio";
 
@@ -19,7 +20,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact Mahanasri M" },
       {
         property: "og:description",
-        content: "Send a message or connect on LinkedIn, GitHub, Instagram and YouTube.",
+        content: "Send a message or connect on LinkedIn, GitHub and LeetCode.",
       },
     ],
   }),
@@ -35,8 +36,7 @@ const schema = z.object({
 const socialIcon: Record<string, React.ComponentType<{ className?: string }>> = {
   GitHub: FaGithub,
   LinkedIn: FaLinkedin,
-  Instagram: FaInstagram,
-  YouTube: FaYoutube,
+  LeetCode: SiLeetcode,
   Email: FaEnvelope,
 };
 
