@@ -15,6 +15,7 @@ import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as CodingProfilesRouteImport } from './routes/coding-profiles'
 import { Route as InternshipsRouteImport } from './routes/internships'
 import { Route as ProjectsRouteImport } from './routes/projects'
+import { Route as ResumeRouteImport } from './routes/resume'
 import { Route as SkillsRouteImport } from './routes/skills'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const ProjectsRoute = ProjectsRouteImport.update({
   path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResumeRoute = ResumeRouteImport.update({
+  id: '/resume',
+  path: '/resume',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SkillsRoute = SkillsRouteImport.update({
   id: '/skills',
   path: '/skills',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/coding-profiles': typeof CodingProfilesRoute
   '/internships': typeof InternshipsRoute
   '/projects': typeof ProjectsRoute
+  '/resume': typeof ResumeRoute
   '/skills': typeof SkillsRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/coding-profiles': typeof CodingProfilesRoute
   '/internships': typeof InternshipsRoute
   '/projects': typeof ProjectsRoute
+  '/resume': typeof ResumeRoute
   '/skills': typeof SkillsRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/coding-profiles': typeof CodingProfilesRoute
   '/internships': typeof InternshipsRoute
   '/projects': typeof ProjectsRoute
+  '/resume': typeof ResumeRoute
   '/skills': typeof SkillsRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/coding-profiles'
     | '/internships'
     | '/projects'
+    | '/resume'
     | '/skills'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/coding-profiles'
     | '/internships'
     | '/projects'
+    | '/resume'
     | '/skills'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/coding-profiles'
     | '/internships'
     | '/projects'
+    | '/resume'
     | '/skills'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   CodingProfilesRoute: typeof CodingProfilesRoute
   InternshipsRoute: typeof InternshipsRoute
   ProjectsRoute: typeof ProjectsRoute
+  ResumeRoute: typeof ResumeRoute
   SkillsRoute: typeof SkillsRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resume': {
+      id: '/resume'
+      path: '/resume'
+      fullPath: '/resume'
+      preLoaderRoute: typeof ResumeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/skills': {
       id: '/skills'
       path: '/skills'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   CodingProfilesRoute: CodingProfilesRoute,
   InternshipsRoute: InternshipsRoute,
   ProjectsRoute: ProjectsRoute,
+  ResumeRoute: ResumeRoute,
   SkillsRoute: SkillsRoute,
 }
 export const routeTree = rootRouteImport
