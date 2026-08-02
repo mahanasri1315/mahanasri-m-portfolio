@@ -20,7 +20,7 @@ export const Route = createFileRoute("/skills")({
       },
     ],
   }),
-  component: Skills;
+  component: Skills,
 });
 
 function Counter({ to }: { to: number }) {
