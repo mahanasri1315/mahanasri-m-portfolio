@@ -63,7 +63,7 @@ function Hero() {
   return (
     <main className="relative z-10">
       <section className="relative flex min-h-screen items-center px-5">
-        <div className="absolute inset-0 -z-0 opacity-90">
+        <div className="absolute inset-y-0 right-0 w-full opacity-45 sm:opacity-60 lg:w-[56%] lg:opacity-95">
           <Hero3D />
         </div>
 
