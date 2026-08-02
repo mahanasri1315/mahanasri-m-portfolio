@@ -3,19 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { navLinks, profile, socials } from "@/data/portfolio";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaYoutube,
-  FaEnvelope,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const socialIcon: Record<string, React.ComponentType<{ className?: string }>> = {
   GitHub: FaGithub,
   LinkedIn: FaLinkedin,
-  Instagram: FaInstagram,
-  YouTube: FaYoutube,
+  LeetCode: SiLeetcode,
   Email: FaEnvelope,
 };
 
