@@ -13,7 +13,7 @@ function Rig() {
     ref.current.rotation.x += (-y * 0.3 - ref.current.rotation.x) * 0.03;
   });
   return (
-    <group ref={ref}>
+    <group ref={ref} scale={0.85}>
       <Float speed={1.6} rotationIntensity={1.1} floatIntensity={1.6}>
         <TorusKnot args={[0.75, 0.24, 160, 32]} position={[0, 0.1, 0]}>
           <meshStandardMaterial
