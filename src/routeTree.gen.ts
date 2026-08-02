@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as CodingProfilesRouteImport } from './routes/coding-profiles'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as InternshipsRouteImport } from './routes/internships'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ResumeRouteImport } from './routes/resume'
@@ -36,6 +37,11 @@ const CertificationsRoute = CertificationsRouteImport.update({
 const CodingProfilesRoute = CodingProfilesRouteImport.update({
   id: '/coding-profiles',
   path: '/coding-profiles',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InternshipsRoute = InternshipsRouteImport.update({
@@ -64,6 +70,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/certifications': typeof CertificationsRoute
   '/coding-profiles': typeof CodingProfilesRoute
+  '/contact': typeof ContactRoute
   '/internships': typeof InternshipsRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
@@ -74,6 +81,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/certifications': typeof CertificationsRoute
   '/coding-profiles': typeof CodingProfilesRoute
+  '/contact': typeof ContactRoute
   '/internships': typeof InternshipsRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
@@ -85,6 +93,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/certifications': typeof CertificationsRoute
   '/coding-profiles': typeof CodingProfilesRoute
+  '/contact': typeof ContactRoute
   '/internships': typeof InternshipsRoute
   '/projects': typeof ProjectsRoute
   '/resume': typeof ResumeRoute
@@ -97,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certifications'
     | '/coding-profiles'
+    | '/contact'
     | '/internships'
     | '/projects'
     | '/resume'
@@ -107,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certifications'
     | '/coding-profiles'
+    | '/contact'
     | '/internships'
     | '/projects'
     | '/resume'
@@ -117,6 +128,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/certifications'
     | '/coding-profiles'
+    | '/contact'
     | '/internships'
     | '/projects'
     | '/resume'
@@ -128,6 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CertificationsRoute: typeof CertificationsRoute
   CodingProfilesRoute: typeof CodingProfilesRoute
+  ContactRoute: typeof ContactRoute
   InternshipsRoute: typeof InternshipsRoute
   ProjectsRoute: typeof ProjectsRoute
   ResumeRoute: typeof ResumeRoute
@@ -162,6 +175,13 @@ declare module '@tanstack/react-router' {
       path: '/coding-profiles'
       fullPath: '/coding-profiles'
       preLoaderRoute: typeof CodingProfilesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/internships': {
@@ -200,6 +220,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CertificationsRoute: CertificationsRoute,
   CodingProfilesRoute: CodingProfilesRoute,
+  ContactRoute: ContactRoute,
   InternshipsRoute: InternshipsRoute,
   ProjectsRoute: ProjectsRoute,
   ResumeRoute: ResumeRoute,
