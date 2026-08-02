@@ -70,7 +70,7 @@ export default function Scene3D() {
   return (
     <Canvas
       dpr={[1, 1.7]}
-      camera={{ position: [0, 0, 5], fov: 45 }}
+      camera={{ position: [0, 0, 7], fov: 40 }}
       gl={{ antialias: true, alpha: true }}
     >
       <ambientLight intensity={0.5} />
