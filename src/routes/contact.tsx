@@ -194,7 +194,7 @@ function Contact() {
                   <span className="flex flex-col">
                     <span>{s.name}</span>
                     {isLinkedIn && (
-                      <span className="text-xs text-muted-foreground">linkedin.com/in/mahanasri-m</span>
+                      <span className="text-xs text-muted-foreground">www.linkedin.com/in/mahanasri-m</span>
                     )}
                   </span>
                 </motion.a>
