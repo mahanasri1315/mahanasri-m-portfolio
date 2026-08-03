@@ -65,6 +65,20 @@ function Resume() {
           <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
             PDF · updated recently
           </p>
+
+          {linkedInUrl && (
+            <motion.a
+              href={linkedInUrl}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ scale: 1.04, y: -3 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground"
+            >
+              <FaLinkedin className="size-4 text-[#0A66C2]" />
+              linkedin.com/in/mahanasri-m
+            </motion.a>
+          )}
         </motion.div>
 
         <motion.div
