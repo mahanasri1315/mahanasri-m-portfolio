@@ -114,7 +114,7 @@ export const codingProfiles = {
     { name: "LeetCode", url: "https://leetcode.com/u/k3nlk9iAwU/", note: "DSA problem solving" },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/mahanasri-m",
+      url: "https://linkedin.com/in/mahanasri-m",
       note: "Professional network",
     },
   ],
@@ -128,7 +128,7 @@ export const codingStats = [
 ];
 
 export const socials = [
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/mahanasri-m" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/mahanasri-m" },
   { name: "GitHub", url: "https://github.com/" },
   { name: "LeetCode", url: "https://leetcode.com/u/k3nlk9iAwU/" },
   { name: "Email", url: `mailto:${profile.email}` },

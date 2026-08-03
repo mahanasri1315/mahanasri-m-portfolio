@@ -180,6 +180,7 @@ function Contact() {
           <div className="mt-7 grid gap-3">
             {socials.map((s) => {
               const Icon = socialIcon[s.name]!;
+              const isLinkedIn = s.name === "LinkedIn";
               return (
                 <motion.a
                   key={s.name}
@@ -187,10 +188,15 @@ function Contact() {
                   target="_blank"
                   rel="noreferrer"
                   whileHover={{ x: 6 }}
-                  className="flex items-center gap-4 rounded-xl border border-border/60 px-4 py-3 text-sm transition-colors hover:border-accent/50 hover:text-accent"
+                  className="flex min-h-[3.25rem] items-center gap-4 rounded-xl border border-border/60 px-4 py-3 text-sm transition-colors hover:border-accent/50 hover:text-accent"
                 >
-                  <Icon className="size-4" />
-                  {s.name}
+                  <Icon className="size-5 shrink-0" />
+                  <span className="flex flex-col">
+                    <span>{s.name}</span>
+                    {isLinkedIn && (
+                      <span className="text-xs text-muted-foreground">linkedin.com/in/mahanasri-m</span>
+                    )}
+                  </span>
                 </motion.a>
               );
             })}
