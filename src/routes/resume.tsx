@@ -76,7 +76,7 @@ function Resume() {
               className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full glass px-6 py-3 text-sm font-semibold text-foreground"
             >
               <FaLinkedin className="size-4 text-[#0A66C2]" />
-              linkedin.com/in/mahanasri-m
+              www.linkedin.com/in/mahanasri-m
             </motion.a>
           )}
         </motion.div>
