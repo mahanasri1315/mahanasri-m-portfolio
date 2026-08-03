@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { HiOutlineDownload, HiOutlineDocumentText } from "react-icons/hi";
+import { FaLinkedin } from "react-icons/fa";
 import { PageShell } from "@/components/portfolio/PageShell";
-import { profile, skills, internships, certifications, projects } from "@/data/portfolio";
+import { profile, skills, internships, certifications, projects, socials } from "@/data/portfolio";
+
+const linkedInUrl = socials.find((s) => s.name === "LinkedIn")?.url;
 
 export const Route = createFileRoute("/resume")({
   head: () => ({
