@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { HiArrowNarrowRight, HiOutlineDownload } from "react-icons/hi";
 import { Hero3D } from "@/components/portfolio/Background";
 import { profile } from "@/data/portfolio";
+import photoAsset from "@/assets/mahanasri-photo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
