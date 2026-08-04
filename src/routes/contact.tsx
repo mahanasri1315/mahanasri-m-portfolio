@@ -179,16 +179,18 @@ function Contact() {
           </p>
           <div className="mt-7 grid gap-3">
             {socials.map((s) => {
-              const Icon = socialIcon[s.name]!;
+              const Icon = socialIcon[s.name];
+              if (!Icon) return null;
               const isLinkedIn = s.name === "LinkedIn";
               return (
                 <motion.a
                   key={s.name}
                   href={s.url}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={isLinkedIn ? "_self" : "_blank"}
+                  rel={isLinkedIn ? undefined : "noreferrer"}
+                  aria-label={isLinkedIn ? "Open Mahanasri M's LinkedIn profile" : `Open ${s.name}`}
                   whileHover={{ x: 6 }}
-                  className="flex min-h-[3.25rem] items-center gap-4 rounded-xl border border-border/60 px-4 py-3 text-sm transition-colors hover:border-accent/50 hover:text-accent"
+                  className="flex min-h-14 touch-manipulation items-center gap-4 rounded-xl border border-border/60 px-4 py-3 text-sm transition-colors hover:border-accent/50 hover:text-accent"
                 >
                   <Icon className="size-5 shrink-0" />
                   <span className="flex flex-col">
