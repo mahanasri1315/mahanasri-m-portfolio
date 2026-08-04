@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Futuristic portfolio showcasing projects, internships, certifications and coding profiles of Mahanasri M.",
+          "Portfolio of Mahanasri M, Computer Science Engineering student at SNS College of Technology — full stack developer, AI enthusiast and problem solver.",
       },
     ],
   }),
