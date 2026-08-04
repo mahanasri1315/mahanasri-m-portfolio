@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { HiArrowNarrowRight, HiOutlineDownload } from "react-icons/hi";
 import { Hero3D } from "@/components/portfolio/Background";
 import { profile } from "@/data/portfolio";
+import photoAsset from "@/assets/mahanasri-photo.jpeg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -76,6 +77,22 @@ function Hero() {
           >
             {profile.role}
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="pointer-events-auto mt-6 inline-block"
+          >
+            <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-accent/40 p-1 shadow-[0_0_30px_-8px_color-mix(in_oklab,var(--primary)_50%,transparent)] sm:h-32 sm:w-32">
+              <img
+                src={photoAsset.url}
+                alt={`${profile.name} — ${profile.role}`}
+                className="h-full w-full rounded-full object-cover"
+                loading="eager"
+              />
+            </div>
+          </motion.div>
 
           <h1 className="mt-6 flex flex-wrap font-display text-5xl font-bold leading-[1.02] sm:text-7xl md:text-8xl">
             {name.map((ch, i) => (
