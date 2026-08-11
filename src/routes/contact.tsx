@@ -189,11 +189,6 @@ function Contact() {
                   href={s.url}
                   target={isMail ? "_self" : "_blank"}
                   rel={isMail ? undefined : "noopener noreferrer"}
-                  onClick={(e) => {
-                    if (isMail) return;
-                    e.preventDefault();
-                    window.open(s.url, "_blank", "noopener,noreferrer");
-                  }}
                   aria-label={isLinkedIn ? "Open Mahanasri M's LinkedIn profile" : `Open ${s.name}`}
                   whileHover={{ x: 6 }}
                   className="flex min-h-14 touch-manipulation items-center gap-4 rounded-xl border border-border/60 px-4 py-3 text-sm transition-colors hover:border-accent/50 hover:text-accent"
